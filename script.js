@@ -15,27 +15,36 @@ function getComputerChoice() {
 }
 
 function match(playerSelection, computerSelection) {
-    let p1 = playerSelection.toLowerCase
-    let p2 = computerSelection.toLowerCase
+    let p1 = playerSelection;
+    console.log(p1);
+    let p2 = computerSelection;
+    console.log(p2);
 
     if (p1 === rock && p2 === scissors || p1 === paper && p2 === rock || p1 === scissors && p2 === paper){
         playerScore++;
-        return `You have won this round, current score ${playerScore} to ${computerScore}`         
+        return console.log(`You have won this round, current score ${playerScore} to ${computerScore}`)    
     }
     else if (p1 === p2){
-        return `This round is a tie, current score ${playerScore} to ${computerScore}`
+        return console.log(`This round is a tie, current score ${playerScore} to ${computerScore}`)
+    }
+    else if (p1 !== rock && p1 !== scissors && p1 !== paper) {
+        return console.log('You must correctly spell only rock, paper, or scissors to play. These are the only options.')
     }
     else {
         computerScore++
-        return `You have lost this round, current score ${playerScore} to ${computerScore}`
+        return console.log(`You have lost this round, current score ${playerScore} to ${computerScore}`)
     }
 }
 
 function game() {
+    var ps;
+    var ps2;
     playerScore = 0;
     computerScore = 0;
-    while(playerScore < 5 || computerScore < 5) {
-        let playerSelection = prompt("Rock, paper, or scissors?");
+    while(playerScore < 5 && computerScore < 5) {
+        ps = prompt("Rock, paper, or scissors?");
+        ps2 = ps.toLowerCase();
+        let playerSelection = ps2;
         let computerSelection = getComputerChoice();
         match(playerSelection, computerSelection)
     }
