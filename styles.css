@@ -1,0 +1,59 @@
+.display {
+    width: 80vw;
+    margin: auto;
+    border: 1px dotted grey;
+    min-height: 20vh;
+}
+
+.top {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+}
+
+.bottom {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+button {
+    width: 100px;
+    height: 80px;
+    border-radius: 5px;
+    background-color: lightslategray;
+    border: 1px solid grey;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+}
+
+button:hover {
+    width: 100px;
+    height: 80px;
+    border-radius: 5px;
+    background-color: lightskyblue;
+    border: 1px solid grey;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+}
+
+.Tophalf {
+    display: flex;
+    flex-direction: column;
+}
+
+.Scores {
+    font-size: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+}
+
+#instructions {
+    text-align: center;
+    font-size: 30px;
+}
